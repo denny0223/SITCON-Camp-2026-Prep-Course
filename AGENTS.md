@@ -49,7 +49,9 @@ The workshop should teach a minimal but complete collaboration loop:
 - One core concept per slide.
 - Keep visible text short: keywords, copyable commands, and navigation steps.
 - Prefer simple diagrams, contrast pairs, and checklists over paragraphs.
-- Use screenshots only where they help learners find UI locations.
+- Screenshots or image-only slides are acceptable when the artifact is the
+  current object of attention. Make sure the slide still tells learners what to
+  look for.
 - Include enough navigation detail for workshop operation: what to click, what to see, and how to know the step is complete.
 - Use explicit `檢核點` slides or blocks so learners and TAs can identify progress.
 - Do not overload slides with polished marketing language.
@@ -57,90 +59,67 @@ The workshop should teach a minimal but complete collaboration loop:
 
 ## Denny's slide voice
 
-Write this deck as a live workshop cue sheet, not prose documentation.
+Write slide bodies as live cues, not documentation.
 
-A slide body should help Denny control the room's attention, help the audience
-locate the current step, and make the next action easy to follow. The spoken
-demo carries most of the explanation.
+Each slide should first show the thing the audience needs to locate, type,
+compare, or check. Denny can explain why live.
 
 Use the style anchors below as the default reference for Denny's slide rhythm.
-For substantial style rewrites, use these anchors first. If prior Denny decks
-are available in the working context, sample a few before editing to refine
-rhythm and density. Keep vocabulary, artifacts, and examples aligned with the
-current deck's topic, audience, and task.
+If prior Denny decks are available in the working context and the task is a
+substantial style rewrite, sample a few before editing. Use them to refine
+rhythm and density, not to copy old topics.
 
-Keep this section small. Use selected examples as style anchors, not as an
-archive dump. When adding a rule or example, replace a weaker one instead of
-appending. Move extra evidence into speaker notes or maintainer docs.
+### Slide Body Grammar
 
 Core transform:
 
-README prose -> cue / artifact / command / contrast / expected output /
-checkpoint.
+`README prose -> cue / artifact / command / contrast / expected output / 檢核點`
 
-Artifact-first rule:
+Evidence before explanation:
+
+Start with a concrete artifact: screenshot, URL, demo state, path, command,
+prompt, case, data point, diagram, expected screen, expected output, or
+`檢核點`. Use `### 重點` or an equivalent summary cue only after the artifact
+or demo target is visible.
+
+Sparse does not mean under-specified:
+
+Public talks can use title-only beats. Workshops and courses still need enough
+state to follow the room: UI path, file path, command, expected result, recovery
+cue, or `檢核點`.
 
 Every slide should have one visible anchor that tells the audience where they
-are: a question, UI path, repo path, command, screenshot, expected output,
-contrast pair, or `檢核點`. One anchor may be a pair: Before / After,
-Input / Output, You / Agent, Git / GitHub.
+are. One anchor may be a pair: Before / After, Input / Output, You / Agent,
+Git / GitHub.
 
-Prefer:
+### Micro-Style
 
-- Cue-like titles: `Survey`, `Version Control System ?`, `Git`, `DEMO`, `檢核點`.
-- Short audience prompts: `是否寫過程式？`, `版本控制經驗`, `Shell 熟悉程度`, `GitHub 帳號`.
-- Direct live reactions or judgments: `總有意外`, `噢！`, `.git 可以 access`, `誰？改了什麼？`.
-- Artifact-first slides: repo path, command, URL, QR code, screenshot, expected output.
-- Domain-native technical terms people actually say in that context; examples here: `repo`, `commit`, `diff`, `schema`, `prompt`, `Agent`, `JSON`, `Markdown`.
-- Human-tool collaboration cues: `input / rules / output / human check`; example: `prompt -> JSON -> preview -> diff -> commit`.
-- Domain-specific failure cues; examples here: `格式對，內容錯`, `多出個資？停`, `push rejected？先 sync`.
-- Useful fragments over complete sentences: `版本標題`, `關鍵輸出`, `共同語言`, `可使用平台`.
+- Title shapes: `Survey`, `DEMO`, `Practice`, `檢核點`, `需求確認`, `除錯`, a URL, a file path, or a command.
+- Question titles: `是否寫過程式？`, `Shell 熟悉程度`, `這個 diff 改了什麼？`
+- Contrast titles: `Git / GitHub`, `Public / Private`, `Before / After`, `Input / Output`.
+- Chinese / English mixing: Chinese for room cues; English for product names,
+  commands, file paths, repo names, and terms people actually say.
+- Body shape: 0-4 bullets, command block, screenshot, URL, repo path, prompt block, expected output, or small checklist.
+- Failure cues: `總有意外`, `噢！`, `格式對，內容錯`.
 
-Rewrite examples:
+### Current Workshop Rewrite Examples
 
 - `建立可追蹤且具備責任分工的協作流程` -> `誰？改了什麼？`
-- `說明 GitHub 與 Git 的差異` -> `Git / GitHub` + `It's different`
-- `讓學員理解 Agent 的限制與責任邊界` -> `可：產生 JSON` / `不可：force push`
-- `有效提升提交前審查品質` -> `這個 diff 改了什麼？為什麼 OK？`
-
-Mini patterns:
-
-```markdown
-# Survey
-# 是否寫過程式？
-```
-
-```markdown
-# Git / GitHub
-## It's different
-```
-
-```markdown
-# commit
-
-git status
-git diff
-git commit
-```
-
-```markdown
-# Agent 會犯錯
-
-- 格式對，內容錯
-- 多出個資？停
-- 看 diff
-```
+- `讓學員理解 Markdown 到 JSON 的資料轉換流程` -> `Markdown -> JSON`
+- `避免團隊協作時產生檔案衝突` -> `notes/<github>.md` + `不要共用同一個檔案`
+- `透過本機預覽確認資料是否正確呈現` -> `pnpm run dev` + `看到自己的卡片`
 
 Avoid:
 
 - Turning each slide into a mini article.
-- AI-flavored complete sentences such as `建立可追蹤且具備責任分工的協作流程`.
 - Marketing tone, motivational filler, or polished documentation voice.
 - Over-translating domain-native terms such as `commit`, `diff`, `repo`, `schema`, `prompt`, or `Agent`.
 - Explaining away all of the whitespace and timing.
 - Replacing a concrete artifact with abstract summary.
 - Adding text just because the idea feels important.
 - Definition-first slides when a prompt, artifact, demo, or checkpoint would work.
+- Objective-summary titles like `建立...`, `說明...`, `提升...`, `確保...`.
+- Sentences that start with `透過...來...` but show no artifact, command, or decision.
 
 Revision order:
 
@@ -162,7 +141,9 @@ Agent check:
 - Is there a visible anchor the audience can use to know where they are?
 - For collaboration slides, is the human/tool boundary visible?
 
-## Important conceptual choices
+## Deck Requirements
+
+Style rules must not override these requirements.
 
 ### Markdown
 
@@ -198,6 +179,13 @@ input / rules / output / human check
 ```
 
 New tools must name what they may change and what humans must still review.
+
+Use visible boundary and failure cues such as:
+
+- `可：產生 JSON`
+- `不可：force push`
+- `格式對，內容錯`
+- `push rejected？先 sync`
 
 ### Local preview
 
