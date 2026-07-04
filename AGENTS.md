@@ -55,6 +55,63 @@ The workshop should teach a minimal but complete collaboration loop:
 - Do not overload slides with polished marketing language.
 - Do not turn the deck into a full written tutorial. Longer details belong in README files or task documents.
 
+## Denny's slide voice
+
+Write this deck as a live workshop cue sheet, not prose documentation.
+
+A slide should help Denny remember what to say and help learners locate the
+current step. It should not try to explain the whole idea by itself.
+
+The strongest style references are Denny's pre-AI-boom decks: short cue titles,
+survey prompts, real screenshots or photos, raw links, command names, concrete
+tool paths, and occasional direct jokes or community-specific phrasing. They do
+not sound like polished documentation. They sound like someone guiding a room.
+
+Use selected examples as style anchors, not as an archive dump. Prompting
+research suggests that example selection and format matter, while long context
+can bury important rules. Keep this section small, representative, and easy to
+apply.
+
+Core rule:
+
+If a sentence sounds like README prose, shorten it into a cue, label, example,
+command, URL, contrast pair, or checkpoint.
+
+Prefer:
+
+- Cue-like titles from older decks: `Survey`, `Version Control System ?`, `Git`, `DEMO`.
+- Short audience prompts: `是否寫過程式？`, `版本控制經驗`, `Shell 熟悉程度`, `GitHub 帳號`.
+- Direct live reactions or judgments: `總有意外`, `噢！`, `.git 可以 access`, `誰？改了什麼？`.
+- Concrete collaboration cues: `動手之前，充分討論，釐清權責人`, `提出修改，並充分說明原因`.
+- Link-first or artifact-first slides: `Fork me on github`, `Mailing list`, `IRC`, raw URLs, screenshots, repo paths.
+- Practice-native technical terms: `repo`, `commit`, `diff`, `schema`, `prompt`, `Agent`, `JSON`, `Markdown`.
+- Useful fragments over complete sentences: `版本標題`, `關鍵輸出`, `共同語言`, `可使用平台`.
+- Contrast before definition: `Git / GitHub` then `It's different`; today / tomorrow; Google Docs / Git commit.
+- One visible anchor per slide: a question, path, command, output, example, or check.
+
+Avoid:
+
+- Turning each slide into a mini article.
+- AI-flavored complete sentences such as `建立可追蹤且具備責任分工的協作流程`.
+- Marketing tone, motivational filler, or sentences Denny would not actually say live.
+- Over-translating `commit`, `diff`, `repo`, `schema`, or other terms that are normally said in English.
+- Explaining away all of the whitespace and timing.
+- Replacing a concrete artifact with abstract summary.
+
+Revision order:
+
+1. Delete.
+2. Shorten.
+3. Replace with words Denny would say live.
+4. Add explanation only when learners would be blocked without it.
+
+Agent check:
+
+- Is this a slide cue, or README prose?
+- Would Denny actually say this sentence on stage?
+- Does the learner need to see this now, or can it be spoken live?
+- Can this become one cue, one example, one operation path, or one expected output?
+
 ## Important conceptual choices
 
 ### Markdown
