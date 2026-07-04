@@ -24,8 +24,9 @@ style: |
   .small { font-size: 0.78em; color: #555; }
   .muted { color: #777; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; align-items: start; }
-  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.9em; align-items: start; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.9em; align-items: stretch; }
   .box { border: 2px solid #ddd; padding: 0.65em 0.8em; border-radius: 0.35em; }
+  .two-col + .lead { margin-top: 1.15em; }
   .big { font-size: 1.7em; font-weight: 700; }
   .center { text-align: center; }
   section.title .title-meta { margin-top: 3.8em; }
@@ -40,6 +41,8 @@ style: |
   section.commit-message .small { margin: 0.2em 0 0.8em; }
   section.local-remote .two-col { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
   section.local-remote img { width: 520px; }
+  section.workflow-compare .box { padding: 0.5em 0.75em; }
+  section.workflow-compare .lead { margin-top: 0.75em; }
   section.closing .license-credit { margin-top: 4.2em; }
   .license-credit { color: #555; font-size: 0.62em; line-height: 1.7; }
   .license-credit img { vertical-align: middle; margin-right: 0.35em; }
@@ -888,6 +891,8 @@ git push
 ```
 
 ---
+
+<!-- _class: workflow-compare -->
 
 # 對比軟體工程主線
 
