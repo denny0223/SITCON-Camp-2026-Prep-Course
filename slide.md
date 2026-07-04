@@ -87,9 +87,9 @@ SITCON Camp 2026 先導課程
 
 ---
 
-# 不是工具課
+# 工具不重要
 
-<div class="big">工具會換，流程會留下來</div>
+<div class="big">熟悉流程</div>
 
 - 把想法寫清楚
 - 讓隊友和 Agent 看得懂
@@ -127,9 +127,7 @@ SITCON Camp 2026 先導課程
 
 # 為什麼從 Google Docs 開始？
 
-<div class="lead">軟體工程不是從寫程式開始。</div>
-
-它常常從這些事情開始：
+<div class="lead">軟體工程不只寫程式</div>
 
 - 把想法寫下來
 - 讓別人看得懂
@@ -138,9 +136,9 @@ SITCON Camp 2026 先導課程
 
 ---
 
-# Markdown 是什麼？
+# Markdown？
 
-<div class="lead">Markdown 是一種用純文字表示結構的寫法。</div>
+<div class="lead">純文字表達結構的寫法</div>
 
 ```markdown
 ## GitHub 帳號
@@ -179,7 +177,7 @@ SITCON Camp 2026 先導課程
 </div>
 </div>
 
-<div class="lead">Markdown 不是排版，是讓想法有結構。</div>
+<div class="lead">排版，資訊結構化</div>
 
 ---
 
@@ -198,7 +196,7 @@ SITCON Camp 2026 先導課程
 
 ---
 
-# 先做公開 profile 草稿
+# Profile 草稿
 
 請在 Google Docs 完成：
 
@@ -214,11 +212,9 @@ SITCON Camp 2026 先導課程
 ## 技術陣營
 ```
 
-<div class="small">這是等等要交給 Agent 的資料來源。</div>
-
 ---
 
-# 公開名片，不是個資表
+# 公開名片，不寫個資
 
 <div class="two-col">
 <div>
@@ -283,7 +279,7 @@ Emacs
 
 # Profile 草稿完成
 
-請確認你已填好：
+請確認填好：
 
 - GitHub 帳號
 - 顯示名稱
@@ -305,24 +301,12 @@ Emacs
 → 查看版本記錄
 ```
 
-你會看到：
+會看到：
 
-- 誰改了？
-- 什麼時候改？
-- 改了哪裡？
-- 能不能回去？
-
----
-
-# 版本紀錄是安全感
-
-<div class="lead">多人一起改東西時，紀錄不是多餘的。</div>
-
-它讓我們知道：
-
-- 修改不是憑空消失
-- 錯了可以回頭
-- 可以追蹤誰做了什麼
+- 是誰
+- 在什麼時候
+- 改了什麼
+- 可以回到舊版本
 
 ---
 
@@ -347,7 +331,7 @@ Emacs
 </div>
 </div>
 
-<div class="lead">commit 是有名字、有目的、值得被記住的版本紀錄。</div>
+<div class="lead">commit 非自動化，有意義有署名</div>
 
 ---
 
@@ -355,7 +339,7 @@ Emacs
 
 # commit message
 
-<div class="lead">commit message 是版本的標題。</div>
+<div class="lead">版本標題</div>
 
 ```text
 docs(profile): add profile draft
@@ -370,9 +354,7 @@ fix(profile): correct faction code
 
 ---
 
-# VS Code 是工作台
-
-只用五個地方：
+# VS Code
 
 - Explorer：看檔案
 - Editor：改檔案
@@ -382,7 +364,7 @@ fix(profile): correct faction code
 
 ---
 
-# 讓 VS Code 登入 GitHub
+# 在 VS Code 登入 GitHub
 
 操作路徑：
 
@@ -397,21 +379,21 @@ VS Code 左下角 Accounts
 
 ---
 
-# GitHub 認得你，Git 也要認得你
+# GitHub ≠ Git
 
 <div class="two-col">
 <div class="box">
 
 ## GitHub 登入
 
-我有權限連到 GitHub
+有權限連到 GitHub
 
 </div>
 <div class="box">
 
 ## Git 作者設定
 
-commit 要記在誰名下
+commit 時的作者名稱和 email
 
 </div>
 </div>
@@ -443,7 +425,7 @@ git config --global user.name
 git config --global user.email
 ```
 
-你應該看到：
+應該看到：
 
 ```text
 第一行：你的 Git 使用者名稱
@@ -530,16 +512,14 @@ Explorer
 
 ---
 
-# Agent 是 repo 裡的協作者
-
-它可以幫你：
+# 與 Agent 協作
 
 - 讀檔案
 - 依照規則轉換資料
 - 修改檔案
 - 說明它改了什麼
 
-但它不負責最後決定。
+<div class="lead">Agent 協助，但不負責最後決定。</div>
 
 ---
 
@@ -568,7 +548,7 @@ Explorer
 
 ---
 
-# Agent 要讀哪些東西？
+# Agent 需要知道規則
 
 ```text
 notes/<github>.md
@@ -577,7 +557,7 @@ data/faction-options.json
 AGENTS.md
 ```
 
-關鍵詞：
+下 prompt 前該有的準備：
 
 ```text
 輸入 / 規則 / 選項 / 協作指示
@@ -587,7 +567,7 @@ AGENTS.md
 
 # JSON 是什麼？
 
-<div class="lead">JSON 是讓程式讀得懂的資料格式。</div>
+<div class="lead">讓程式讀得懂的資料格式</div>
 
 ```text
 自然語言：
@@ -627,11 +607,11 @@ AGENTS.md
 - Agent 產生內容
 - 專案資料交換
 
-<div class="lead">JSON 是很多工具和服務之間的共同語言。</div>
+<div class="lead">眾多工具和服務之間的共同語言。</div>
 
 ---
 
-# JSON 很嚴格
+# JSON 結構嚴謹
 
 常見錯誤：
 
@@ -643,7 +623,7 @@ AGENTS.md
 
 ---
 
-# 固定代號讓統計變簡單
+# 固定字串避免混亂
 
 ```json
 "editor": "vscode"
@@ -658,17 +638,17 @@ VSCode
 Visual Studio Code
 ```
 
-<div class="lead">人類覺得差不多，程式不會自動知道它們一樣。</div>
+<div class="lead">人類覺得一樣，機器看不懂</div>
 
 ---
 
-# schema 是寫給工具看的規則
+# schema - 寫給工具看的規則
 
 - `required`：哪些欄位一定要有
 - `enum`：只能使用哪些固定選項
 - `validation`：檢查格式是否正確
 
-<div class="lead">不靠人類記住規則，把規則寫進工具裡。</div>
+<div class="lead">不靠人類記住規則，寫下來並讓工具可以使用</div>
 
 ---
 
@@ -701,7 +681,7 @@ Visual Studio Code
 
 ---
 
-# 本機預覽：看見成果
+# 本機預覽
 
 打開 VS Code Terminal：
 
@@ -709,7 +689,7 @@ Visual Studio Code
 pnpm run dev
 ```
 
-你應該看到類似：
+關鍵輸出：
 
 ```text
 Local: http://localhost:5173/
@@ -733,7 +713,7 @@ Local: http://localhost:5173/
 
 ---
 
-# Agent 會改檔，但不代表它是對的
+# Agent 會犯錯
 
 可能發生：
 
@@ -745,7 +725,7 @@ Local: http://localhost:5173/
 
 ---
 
-# diff 是人類檢查點
+# 看 diff 是人類應盡責任
 
 操作路徑：
 
@@ -786,9 +766,9 @@ Source Control
 <div class="two-col">
 <div>
 
-<div class="lead">commit 只寫入在本機。</div>
+<div class="lead">commit 只寫入在本機</div>
 
-還需要 push，GitHub 才看得到。
+需要 push 到 GitHub 才會公開
 
 ```text
 本機 commit
@@ -879,7 +859,7 @@ git push
 
 # 公開成果頁
 
-你應該看到：
+應該看到：
 
 - GitHub 頭貼
 - 顯示名稱
@@ -892,7 +872,7 @@ git push
 
 ---
 
-# 其實完成了什麼
+# 其實完成了
 
 ```text
 想法
@@ -909,7 +889,7 @@ git push
 
 ---
 
-# 明天只是把今天放大
+# 對比軟體工程主線
 
 <div class="two-col">
 <div class="box">
@@ -936,7 +916,7 @@ git push
 </div>
 </div>
 
-<div class="lead">東西變大了，但協作順序一樣。</div>
+<div class="lead">規模變大，協作順序一樣</div>
 
 ---
 
