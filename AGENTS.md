@@ -59,58 +59,108 @@ The workshop should teach a minimal but complete collaboration loop:
 
 Write this deck as a live workshop cue sheet, not prose documentation.
 
-A slide should help Denny remember what to say and help learners locate the
-current step. It should not try to explain the whole idea by itself.
+A slide body should help Denny control the room's attention, help the audience
+locate the current step, and make the next action easy to follow. The spoken
+demo carries most of the explanation.
 
-The strongest style references are Denny's pre-AI-boom decks: short cue titles,
-survey prompts, real screenshots or photos, raw links, command names, concrete
-tool paths, and occasional direct jokes or community-specific phrasing. They do
-not sound like polished documentation. They sound like someone guiding a room.
+Use the style anchors below as the default reference for Denny's slide rhythm.
+For substantial style rewrites, use these anchors first. If prior Denny decks
+are available in the working context, sample a few before editing to refine
+rhythm and density. Keep vocabulary, artifacts, and examples aligned with the
+current deck's topic, audience, and task.
 
-Use selected examples as style anchors, not as an archive dump. Prompting
-research suggests that example selection and format matter, while long context
-can bury important rules. Keep this section small, representative, and easy to
-apply.
+Keep this section small. Use selected examples as style anchors, not as an
+archive dump. When adding a rule or example, replace a weaker one instead of
+appending. Move extra evidence into speaker notes or maintainer docs.
 
-Core rule:
+Core transform:
 
-If a sentence sounds like README prose, shorten it into a cue, label, example,
-command, URL, contrast pair, or checkpoint.
+README prose -> cue / artifact / command / contrast / expected output /
+checkpoint.
+
+Artifact-first rule:
+
+Every slide should have one visible anchor that tells the audience where they
+are: a question, UI path, repo path, command, screenshot, expected output,
+contrast pair, or `檢核點`. One anchor may be a pair: Before / After,
+Input / Output, You / Agent, Git / GitHub.
 
 Prefer:
 
-- Cue-like titles from older decks: `Survey`, `Version Control System ?`, `Git`, `DEMO`.
+- Cue-like titles: `Survey`, `Version Control System ?`, `Git`, `DEMO`, `檢核點`.
 - Short audience prompts: `是否寫過程式？`, `版本控制經驗`, `Shell 熟悉程度`, `GitHub 帳號`.
 - Direct live reactions or judgments: `總有意外`, `噢！`, `.git 可以 access`, `誰？改了什麼？`.
-- Concrete collaboration cues: `動手之前，充分討論，釐清權責人`, `提出修改，並充分說明原因`.
-- Link-first or artifact-first slides: `Fork me on github`, `Mailing list`, `IRC`, raw URLs, screenshots, repo paths.
-- Practice-native technical terms: `repo`, `commit`, `diff`, `schema`, `prompt`, `Agent`, `JSON`, `Markdown`.
+- Artifact-first slides: repo path, command, URL, QR code, screenshot, expected output.
+- Domain-native technical terms people actually say in that context; examples here: `repo`, `commit`, `diff`, `schema`, `prompt`, `Agent`, `JSON`, `Markdown`.
+- Human-tool collaboration cues: `input / rules / output / human check`; example: `prompt -> JSON -> preview -> diff -> commit`.
+- Domain-specific failure cues; examples here: `格式對，內容錯`, `多出個資？停`, `push rejected？先 sync`.
 - Useful fragments over complete sentences: `版本標題`, `關鍵輸出`, `共同語言`, `可使用平台`.
-- Contrast before definition: `Git / GitHub` then `It's different`; today / tomorrow; Google Docs / Git commit.
-- One visible anchor per slide: a question, path, command, output, example, or check.
+
+Rewrite examples:
+
+- `建立可追蹤且具備責任分工的協作流程` -> `誰？改了什麼？`
+- `說明 GitHub 與 Git 的差異` -> `Git / GitHub` + `It's different`
+- `讓學員理解 Agent 的限制與責任邊界` -> `可：產生 JSON` / `不可：force push`
+- `有效提升提交前審查品質` -> `這個 diff 改了什麼？為什麼 OK？`
+
+Mini patterns:
+
+```markdown
+# Survey
+# 是否寫過程式？
+```
+
+```markdown
+# Git / GitHub
+## It's different
+```
+
+```markdown
+# commit
+
+git status
+git diff
+git commit
+```
+
+```markdown
+# Agent 會犯錯
+
+- 格式對，內容錯
+- 多出個資？停
+- 看 diff
+```
 
 Avoid:
 
 - Turning each slide into a mini article.
 - AI-flavored complete sentences such as `建立可追蹤且具備責任分工的協作流程`.
-- Marketing tone, motivational filler, or sentences Denny would not actually say live.
-- Over-translating `commit`, `diff`, `repo`, `schema`, or other terms that are normally said in English.
+- Marketing tone, motivational filler, or polished documentation voice.
+- Over-translating domain-native terms such as `commit`, `diff`, `repo`, `schema`, `prompt`, or `Agent`.
 - Explaining away all of the whitespace and timing.
 - Replacing a concrete artifact with abstract summary.
+- Adding text just because the idea feels important.
+- Definition-first slides when a prompt, artifact, demo, or checkpoint would work.
 
 Revision order:
 
 1. Delete.
 2. Shorten.
 3. Replace with words Denny would say live.
-4. Add explanation only when learners would be blocked without it.
+4. Turn explanation into a cue, command, contrast, expected output, or checkpoint.
+5. Add explanation only when the audience would be blocked without it.
+
+Speaker notes and Markdown comments may contain teaching intent, timing,
+fallback instructions, and maintainer context. Slide body should stay cue-like.
 
 Agent check:
 
 - Is this a slide cue, or README prose?
-- Would Denny actually say this sentence on stage?
-- Does the learner need to see this now, or can it be spoken live?
+- Does this work as a live cue, not documentation?
+- Does the audience need to see this now, or can it be spoken live?
 - Can this become one cue, one example, one operation path, or one expected output?
+- Is there a visible anchor the audience can use to know where they are?
+- For collaboration slides, is the human/tool boundary visible?
 
 ## Important conceptual choices
 
@@ -140,6 +190,14 @@ Do not introduce the Agent abruptly. Prepare learners with the idea that the Age
 The Agent task in this deck is intentionally small: converting `notes/<github>.md` into `profiles/<github>.json` while following `schemas/profile.schema.json` and `data/faction-options.json`.
 
 When Git push or sync problems happen, the Agent may help interpret the current Git state and suggest the next step. It should not be trusted to discard, overwrite, or force-push changes without explicit human review.
+
+Agent collaboration slides in this deck must preserve this chain:
+
+```text
+input / rules / output / human check
+```
+
+New tools must name what they may change and what humans must still review.
 
 ### Local preview
 
