@@ -40,7 +40,7 @@ style: |
   }
   section.commit-message .small { margin: 0.2em 0 0.8em; }
   section.local-remote .two-col { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
-  section.local-remote img { width: 520px; }
+  section.local-remote img { width: 560px; }
   section.workflow-compare .box { padding: 0.5em 0.75em; }
   section.workflow-compare .lead { margin-top: 0.75em; }
   section.closing .license-credit { margin-top: 4.2em; }
@@ -783,7 +783,7 @@ Source Control
 </div>
 <div>
 
-![w:520px](./img/local-remote.png)
+![w:560px](./img/local-remote.svg)
 
 </div>
 </div>

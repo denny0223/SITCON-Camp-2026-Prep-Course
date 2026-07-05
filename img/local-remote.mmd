@@ -1,0 +1,18 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Noto Sans TC, Source Han Sans TC, Microsoft JhengHei, sans-serif", "primaryTextColor": "#222", "lineColor": "#666"}, "sequence": {"mirrorActors": false}}}%%
+sequenceDiagram
+  box rgba(246, 248, 250, 0.7) 本機
+    participant wd as working directory<br/><br/>工作目錄
+    participant stage as staging area<br/><br/>暫存區
+    participant local as local repo<br/><br/>本機 repo
+  end
+
+  box rgba(255, 235, 233, 0.7) 遠端
+    participant remote as remote repo<br/><br/>GitHub repo
+  end
+
+  wd->>stage: git add
+  stage->>local: git commit
+  local->>remote: git push
+  remote->>local: git fetch
+  local->>wd: git checkout
+  local->>wd: git merge
