@@ -49,9 +49,7 @@ The workshop should teach a minimal but complete collaboration loop:
 - One core concept per slide.
 - Keep visible text short: keywords, copyable commands, and navigation steps.
 - Prefer simple diagrams, contrast pairs, and checklists over paragraphs.
-- Screenshots or image-only slides are acceptable when the artifact is the
-  current object of attention. Make sure the slide still tells learners what to
-  look for.
+- Screenshots or image-only slides are acceptable when the artifact is the current object of attention. Make sure the slide still tells learners what to look for.
 - Include enough navigation detail for workshop operation: what to click, what to see, and how to know the step is complete.
 - Use explicit `檢核點` slides or blocks so learners and TAs can identify progress.
 - Do not overload slides with polished marketing language.
@@ -61,13 +59,9 @@ The workshop should teach a minimal but complete collaboration loop:
 
 Write slide bodies as live cues, not documentation.
 
-Each slide should first show the thing the audience needs to locate, type,
-compare, or check. Denny can explain why live.
+Each slide should first show the thing the audience needs to locate, type, compare, or check. Denny can explain why live.
 
-Use the style anchors below as the default reference for Denny's slide rhythm.
-If prior Denny decks are available in the working context and the task is a
-substantial style rewrite, sample a few before editing. Use them to refine
-rhythm and density, not to copy old topics.
+Use the style anchors below as the default reference for Denny's slide rhythm. If prior Denny decks are available in the working context and the task is a substantial style rewrite, sample a few before editing. Use them to refine rhythm and density, not to copy old topics.
 
 ### Slide Body Grammar
 
@@ -77,28 +71,20 @@ Core transform:
 
 Evidence before explanation:
 
-Start with a concrete artifact: screenshot, URL, demo state, path, command,
-prompt, case, data point, diagram, expected screen, expected output, or
-`檢核點`. Use `### 重點` or an equivalent summary cue only after the artifact
-or demo target is visible.
+Start with a concrete artifact: screenshot, URL, demo state, path, command, prompt, case, data point, diagram, expected screen, expected output, or `檢核點`. Use `### 重點` or an equivalent summary cue only after the artifact or demo target is visible.
 
 Sparse does not mean under-specified:
 
-Public talks can use title-only beats. Workshops and courses still need enough
-state to follow the room: UI path, file path, command, expected result, recovery
-cue, or `檢核點`.
+Public talks can use title-only beats. Workshops and courses still need enough state to follow the room: UI path, file path, command, expected result, recovery cue, or `檢核點`.
 
-Every slide should have one visible anchor that tells the audience where they
-are. One anchor may be a pair: Before / After, Input / Output, You / Agent,
-Git / GitHub.
+Every slide should have one visible anchor that tells the audience where they are. One anchor may be a pair: Before / After, Input / Output, You / Agent, Git / GitHub.
 
 ### Micro-Style
 
 - Title shapes: `Survey`, `DEMO`, `Practice`, `檢核點`, `需求確認`, `除錯`, a URL, a file path, or a command.
 - Question titles: `是否寫過程式？`, `Shell 熟悉程度`, `這個 diff 改了什麼？`
 - Contrast titles: `Git / GitHub`, `Public / Private`, `Before / After`, `Input / Output`.
-- Chinese / English mixing: Chinese for room cues; English for product names,
-  commands, file paths, repo names, and terms people actually say.
+- Chinese / English mixing: Chinese for room cues; English for product names, commands, file paths, repo names, and terms people actually say.
 - Body shape: 0-4 bullets, command block, screenshot, URL, repo path, prompt block, expected output, or small checklist.
 - Failure cues: `總有意外`, `噢！`, `格式對，內容錯`.
 
@@ -129,8 +115,7 @@ Revision order:
 4. Turn explanation into a cue, command, contrast, expected output, or checkpoint.
 5. Add explanation only when the audience would be blocked without it.
 
-Speaker notes and Markdown comments may contain teaching intent, timing,
-fallback instructions, and maintainer context. Slide body should stay cue-like.
+Speaker notes and Markdown comments may contain teaching intent, timing, fallback instructions, and maintainer context. Slide body should stay cue-like.
 
 Agent check:
 
