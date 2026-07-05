@@ -4,7 +4,7 @@ Marp slide deck for the two-hour prep workshop before the main software engineer
 
 ## Files
 
-- `slides.md` — Marp slide deck in Traditional Chinese.
+- `slide.md` — Marp slide deck in Traditional Chinese.
 - `AGENTS.md` — instructions for future coding agents maintaining this deck.
 
 ## Render
@@ -14,7 +14,13 @@ Use Marp CLI or the Marp VS Code extension.
 Example:
 
 ```bash
-npx @marp-team/marp-cli slides.md --html --allow-local-files
+npx @marp-team/marp-cli slide.md --html --allow-local-files
+```
+
+Regenerate the Git local/remote sequence diagram before rendering the deck:
+
+```bash
+./render-local-remote.sh
 ```
 
 ## Design intent
